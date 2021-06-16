@@ -12,6 +12,13 @@ new Vue({
           'Bulletin',
           'Reservation'
         ],
+        bestTable:[
+            {
+                name:'THE BEST TABLE IN TOWN',
+                title: 'FINE DINING EXPERIENCE',
+                description: 'Pellentescque vitae viverra risus, sagittis. Venetatis ridiculus scelerisque nisi in urnanulla. Sit tempor a er nisl, ac felis.'
+            }
+        ],
       
           tipologie: [
             {

@@ -33,15 +33,11 @@
                     <div class="barra">
                     </div>
                     <div class="table">
-                        <p>THE BEST TABLE IN TOWN</p>
+                        <p v-for="elemento in bestTable">{{elemento.name}}</p>
             
-                        <h1>FINE DINING EXPERIENCE</h1>
+                        <h1 v-for="elemento in bestTable">{{elemento.title}}</h1>
             
-                        <p>
-                            Pellentescque vitae viverra risus, sagittis.
-                            Venetatis ridiculus scelerisque nisi in urna
-                            nulla. Sit tempor a er nisl, ac felis.
-                        </p>
+                        <p v-for="elemento in bestTable">{{elemento.description}}</p>
             
                         <button class="bottone-bordo-bianco">EXPLORE THE MENU</button>
                     </div>
