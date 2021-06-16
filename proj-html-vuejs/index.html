@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Fontawesome Icons link -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+      <div id="app" class="container-complessivo">
+
+        <!-- INIZIO HEADER CON IL PRIMO JUMBOTRON -->
+        <header id="primoJumbotronTable">
+            <div class="logo-menu">
+                <div class="logo-sinistra">
+                    <img src="images/logo-restaurant-2x-300x58.png" alt="logo ristorante">
+                </div>
+    
+                <nav class="menu-destra">
+                    <ul class="menu-destra-link">
+                        <li v-for='link in menuDestra'><a href="#">{{link}}</a></li>
+                        <i class="fas fa-shopping-cart"></i>
+                    </ul>
+                </nav>
+            </div> <!-- logo-menu -->
+            <div class="container-grande">
+
+                <div class="best-table">
+
+                    <div class="barra">
+                    </div>
+                    <div class="table">
+                        <p>THE BEST TABLE IN TOWN</p>
+            
+                        <h1>FINE DINING EXPERIENCE</h1>
+            
+                        <p>
+                            Pellentescque vitae viverra risus, sagittis.
+                            Venetatis ridiculus scelerisque nisi in urna
+                            nulla. Sit tempor a er nisl, ac felis.
+                        </p>
+            
+                        <button class="bottone-bordo-bianco">EXPLORE THE MENU</button>
+                    </div>
+                
+                </div>
+            </div><!-- container-grande -->
+            
+
+        </header>
+        <!-- FINE HEADER CON IL PRIMO JUMBOTRON -->
+
+        <main>
+            <!--  INIZIO PRIMA SESSIONE SUSHI-->
+            <section id="prima-sessione-sushi">
+                <div class="container-piccolo">
+
+                    <!-- INIZIO PRIMA SESSIONE UP -->
+                    <div class="prima-sessione-up">
+                        <div class="firma">
+                            <p>
+                                <strong>HAC TELLUS, FELIS RISUS AT</strong> mattis mattis. Eget euismod semper eget tortor, donec amet, blandit. Tristique facilisi faucibus elementum feugiat in nam in feugiat. Ipsum odio etiam duis facilisis amet vulputate
+                            </p>
+        
+                            <h1><strong>FOOD IS OUR COMMON GROUND, A UNIVERSAL EXPERIENCE.</strong></h1>
+        
+                            <p>
+                                Tristique tempus condimentun diam donec. Condimentum ullamcorper sit elementum hendrerit mi nulla in consaquat, ut. Mentus, nullam scelerique netus viverra dui
+                            </p>
+                            <img src="images/signature.jpg" width="150" height="130" alt="firma">
+                        </div><!-- firma -->
+                        
+                        <div class="immagine-sushi">
+                            
+                        </div>
+                    </div><!-- prima-sessione-up -->
+                    <!-- FINE PRIMA SESSIONE UP -->
+
+                    <!-- INIZIO PRIMA SESSIONE DOWN -->
+                    <div class="prima-sessione-down">
+                        <ul class="tipologie-sushi-lista">
+                            <li v-for="tipo in tipologie" class="tipologia-sushi-lista-elem">
+                                <div class="tipologia-sushi-lista-elem-img">
+                                    <img :src="'img/' + tipo.img + '.png'" :alt="tipo.name">
+                                </div>
+                                <h4 class="title">{{tipo.name}}</h4>
+
+                                <div class="barra-grigio">
+
+                                </div>
+
+                                <p>{{tipo.description}}</p>
+                                <a href="#"></a><button class="button-sushi">{{tipo.link}}</button></a>
+                            </li>
+                        </ul>
+                    </div><!-- prima-sessione-down -->
+                </div><!-- container-piccolo -->
+                    <!-- FINE PRIMA SESSIONE DOWN -->
+    
+            </section>
+            <!-- FINE PRIMA SESSIONE SUSHI-->
+
+            <!-- INIZIO SECONDA SESSIONE PIATTI SUSHI -->
+            <section class="seconda-sessione-piatti-sushi">
+
+                    <div class="immagine-piatti-sushi">
+
+                    </div>
+                    <div class="best-table-2">
+    
+                        <div class="barra">
+                        </div>
+                        <div class="table-2">
+                            <p>FINE DINING EXPERIENCE</p>
+                
+                            <h1>THE BEST TABLE IN TOWN</h1>
+                
+                            <p>
+                                Pellentescque vitae viverra risus, sagittis.
+                                Venetatis ridiculus scelerisque nisi in urna
+                                nulla.
+                            </p>
+                
+                            <button class="bottone-bordo-bianco">EXPLORE THE MENU</button>
+                        </div>
+                    
+                    </div><!-- best-table -->
+                
+            </section><!-- seconda-sessione-piatti-sushi -->
+            <!-- INIZIO SECONDA SESSIONE PIATTI SUSHI -->
+
+            <!-- INIZIO TERZA SESSIONE RAGAZZA CHE CUCINA -->
+            <section class="terza-sessione-ragazza-cucina">
+                <div class="container-piccolo">
+
+                    <h2 id="title-terza-sessione">What critics are saying about us</h2>
+                    <div class="barra-grigio">
+
+                    </div>
+
+                    <div class="container-immagini-sopra">
+                        <div class="ragazza-cuoca">
+
+                        </div>
+
+                        <div class="descrizione-meggy-stewart">
+
+                            <p>MEGGY STEWART</p>
+                            <h2 class="paper-meggy">NEW YORK TIMES</h2>
+
+                            <!-- CINQUE STELLE CON IL V-FOR -->
+                            <ul class="stelle stelle-meggy">
+                                <li class="stelle-link">
+                                    <i v-for="num in 5" class="fas fa-star"></i>
+                                </li>
+                            </ul>
+                            <!-- CINQUE STELLE CON IL V-FOR -->
+                            
+                            <div class="barra barra-meggy">
+                            </div>
+                            <p>
+                                Non arcu mauris tortor ultrices mollis tellus euismod fermentum. Habitant amet tincidunt id sapien accumsan sed at.
+                            </p>
+                            <p>
+                                Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.
+                            </p>
+
+                            <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
+
+                        </div>  <!-- descrizione-meggy-stewart -->
+                    </div><!-- container-immagini-sopra -->
+
+                    <div class="container-immagini-sotto">
+                        
+                        <div class="mary-maxey">
+                            <div class="descrizione-mary-maxey">
+
+                                <p>MARY MAXEY</p>
+                                <h2 class="paper-maxey">THE GUARDIAN</h2>
+    
+                                <!-- CINQUE STELLE CON IL V-FOR -->
+                                <ul class="stelle">
+                                    <li class="stelle-link">
+                                        <i v-for="num in 5" class="fas fa-star"></i>
+                                    </li>
+                                </ul>
+                                <!-- CINQUE STELLE CON IL V-FOR -->
+                                
+                                <div class="barra">
+                                </div>
+                                <p>
+                                    Non arcu mauris tortor ultrices mollis tellus euismod fermentum. Habitant amet tincidunt id sapien accumsan sed.
+                                </p>
+    
+                                <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
+    
+                            </div>  <!-- descrizione-mary-maxey -->
+                        </div>
+
+                        <div class="patrick-monroe">
+                            <div class="descrizione-patrick-monroe">
+
+                                <p>PATRIK MONROE</p>
+                                <h2 class="paper-patrik">GLOBE AND MAIL</h2>
+    
+                                <!-- CINQUE STELLE CON IL V-FOR -->
+                                <ul class="stelle">
+                                    <li class="stelle-link">
+                                        <i v-for="num in 5" class="fas fa-star"></i>
+                                    </li>
+                                </ul>
+                                <!-- CINQUE STELLE CON IL V-FOR -->
+                                
+                                <div class="barra">
+                                </div>
+                                <p>
+                                    Vivamus magna justo, lacinia eget consectuer sed, convallis at tellus. Nulla porttitor accumsan tincidunt.
+                                </p>
+    
+                                <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
+    
+                            </div>  <!-- descrizione-patrick-monroe -->
+
+                        </div>
+                    </div><!-- container-immagini-sotto -->
+                    
+                </div>
+            <!-- INIZIO TERZA SESSIONE RAGAZZA CHE CUCINA -->
+
+                
+                
+
+            </section>
+            <!-- FINE TERZA SESSIONE RAGAZZA CHE CUCINA -->
+
+
+        </main>
+    
+    </div><!--chiusura vue-->
+
+
+    <!-- VUE JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

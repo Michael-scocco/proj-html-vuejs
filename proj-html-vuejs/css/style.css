@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    background-color: black;
+}
+
+.container-complessivo{
+    max-width: 1440px;
+    background-color: black;
+    margin: auto;
+}
+/* *UNICA PROPRIETA* */
+header, table, .bottone-bordo-bianco,
+.table-2, .stelle-link, .descrizione-meggy-stewart,
+.mary-maxey, .patrick-monroe{
+    color: white;
+}
+/* *UNICA PROPRIETA* */
+
+/* *HEADER* */
+header{
+    /* color: white; */
+    height: 100%;
+}
+header > .container-grande{
+    transform: translateY(30%);
+}
+.logo-menu{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+.logo-sinistra{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    height: 100px;
+}
+
+.menu-destra-link{
+    display: flex;
+    align-items: center;
+    height: 100px;
+    
+}
+
+.menu-destra-link > li{
+    list-style: none;
+}
+
+.menu-destra-link > li > a{
+    text-decoration: none;
+    margin-right: 40px;
+    
+}
+/* *EFFETTO HOVER A LINK* */
+.menu-destra-link > li > a:hover,
+.fa-shopping-cart:hover{
+    color: white;
+}
+
+.menu-destra-link > li > a, 
+.fa-shopping-cart{
+    color: #bcbcbc;
+}
+
+/* *CREO CONTAINER GRANDE PER SESSIONI SUCCESSIVE * */
+.container-grande{
+    background-color: violet;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 300px;
+    
+}
+/* *CREO CONTAINER PICCOLO PER SESSIONI SUCCESSIVE * */
+.container-piccolo{
+    background-color: orange;
+    max-width: 1000px;
+    margin: auto;
+    min-height: 300px;
+}
+/* *REGOLE JUMBO* */
+#primoJumbotronTable{
+    background-image: url(../images/slider52x.jpg);
+    min-height: 800px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+
+}
+/* *REGOLE BEST TABLE* */
+
+.best-table{
+    display: flex;
+}
+    /* *REGOLE BARRA* */
+.barra{
+    border: 1px solid white;
+    width: 50px;
+    height: 0;
+    margin-top: 7px;
+    margin-right: 40px;
+    border-radius: 10px;
+}
+    /* *FINE REGOLE BARRA* */
+
+.table{
+    width: 25%;
+    /* color: white; */
+}
+.table > p:first-child{
+    font-size: 12px;
+}
+.table > h1{
+    font-size: 47px;
+}
+.table > p, h1{
+    margin-bottom: 30px;
+}
+.bottone-bordo-bianco{
+    padding: 10px 20px;
+    border: 1px solid white;
+    /* color: white; */
+    background-color: transparent;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* *FINE REGOLE BEST TABLE* */
+/* * fine HEADER* */
+
+/* *INIZIO PRIMA SESSIONE SUSHI* */
+#prima-sessione-sushi{
+    background-color: white;
+    height: 100%;
+    min-height: 1200px;
+}
+#prima-sessione-sushi > .container-piccolo{
+    transform: translateY(6%);
+}
+
+    /* *INIZIO PRIMA SESSIONE UP* */
+.prima-sessione-up{
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.firma{
+    width: 52%;
+    padding: 39px;
+    padding-right: 120px;
+    height: 600px;
+    padding-left: 0;
+}
+.firma > p, h1{
+    margin-bottom: calc(100% / 8 - 20px);
+}
+.firma > p{
+    line-height: 25px;
+    font-size: 14.4px;
+}
+
+.firma > h1{
+    font-size: 29px;
+    line-height: 45px;
+
+}
+.immagine-sushi{
+    background-image: url(../img/hover-image1.png);
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: 99%;
+    background-position: 6px;
+    width: 48%;
+}
+    /* *FINE PRIMA SESSIONE UP* */
+
+
+    /* *INIZIO PRIMA SESSIONE DOWN* */
+.tipologie-sushi-lista{
+    display: flex;
+    
+}
+.tipologia-sushi-lista-elem{
+    width: calc(100% / 3);
+    text-align: center;
+    list-style: none;
+    padding: 20px;
+}
+.barra-grigio{
+    border: 1px solid #bcbcbc;
+    width: 75px;
+    height: 0;
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%) ;
+}
+.tipologia-sushi-lista-elem> p,
+.barra-grigio,
+.title,
+.tipologia-sushi-lista-elem-img{
+    margin-bottom: 20px;
+}
+.title{
+    font-size: 18px;
+}
+.tipologia-sushi-lista-elem> p{
+    line-height: 25px;
+    font-size: 16px;
+}
+.button-sushi{
+    padding: 10px 20px;
+    background-color: transparent;
+    border:1px solid #bcbcbc;
+    font-size: 12px;
+}
+
+/* *FINE PRIMA SESSIONE SUSHI* */
+
+/* *INIZIO SECONDA SESSIONE PIATTI SUSHI* */
+.seconda-sessione-piatti-sushi{
+    display: flex;
+    min-height: 600px;
+    width: 100%;
+    
+}
+
+.immagine-piatti-sushi{
+    background-image: url(../images/slider32x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 68%;
+
+}
+
+.best-table-2{
+    display: flex;
+    width: 45%;
+    padding: 140px;
+}
+.table-2{
+    width: 100%;
+    /* color: white; */
+}
+.table-2 > p:first-child{
+    font-size: 12px;
+}
+.table-2 > h1{
+    font-size: 27px;
+}
+.table-2 > p, h1{
+    margin-bottom: calc(100% / 4)
+}
+.table-2:last-child > .bottone-bordo-bianco{
+    margin-bottom: 0;
+}
+/* *FINE SECONDA SESSIONE PIATTI SUSHI* */
+
+/* *INIZIA TERZA SESSIONE RAGAZZA CHE CUCINA* */
+.terza-sessione-ragazza-cucina{
+    min-height: 1600px;
+    background-color: tomato;
+}
+#title-terza-sessione{
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 35px;
+}
+.stelle{
+    list-style: none;
+}
+    /* * INIZIO MEGGY STEWART* */
+.container-immagini-sopra{
+    display: flex;
+    margin-top: 50px;
+    background-color: lightpink;
+    margin-bottom: 40px;
+}
+.ragazza-cuoca{
+    background-image: url(../images/blog72x-600x687.jpg);
+    background-repeat: no-repeat;
+    background-size: 104.5%;
+    background-position-x: -7px;
+    height: 598px;
+    width: 50%;
+}
+.descrizione-meggy-stewart{
+    width: 50%;
+    height: 598px;
+    padding: 74px 105px;
+}
+.descrizione-meggy-stewart > p, 
+.paper-meggy, .stelle-meggy, .barra-meggy{
+    margin-bottom: calc(100% / 6.9);
+}
+    /* * FINE MEGGY STEWART* */
+
+.container-immagini-sotto{
+    display: flex;
+    background-color: green;
+    height: 560px;
+}
+    /* *INIZIO MARY MAXEY* *INIZIO PATRICK MONROE**/
+.mary-maxey,
+.patrick-monroe{ 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 560px;
+    width: 50%;
+    padding: 80px 110px;
+}
+.descrizione-mary-maxey,
+.descrizione-patrick-monroe{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 95%;
+}
+    /* *INIZIO FOTO MARY E PATRICK* */
+.mary-maxey{
+    background-image: url(../images/info52x.jpg);
+    margin-right: 4%;
+}
+.patrick-monroe{
+    background-image: url(../images/info12x.jpg);
+}
+    /* *FINE FOTO MARY E PATRICK* */
+
+    /* *FINE MARY MAXEY* *FINE PATRICK MONROE**/
+
+
+/* *FINE TERZA SESSIONE RAGAZZA CHE CUCINA* */
