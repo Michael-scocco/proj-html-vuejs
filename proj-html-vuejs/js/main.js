@@ -33,7 +33,24 @@ new Vue({
               link: 'LEARN MORE ABOUT US'
             }
         ],
-        
-     
+        maggy:[
+            {
+                name: 'MEGGY STEWART',
+                description: 'Non arcu mauris tortor ultrices mollis tellus euismod fermentum. Habitant amet tincidunt id sapien accumsan sed at.',
+                description2: 'Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.'
+            },
+        ],
+        maxey:[
+            {
+                name: 'MARY MAXEY',
+                description: 'Non arcu mauris tortor ultrices mollis tellus euismod fermentum. Habitant amet tincidunt id sapien accumsan sed.',
+            }
+        ],
+        patrik:[
+            {
+                name: 'PATRICK MONROE',
+                description: 'Vivamus magna justo, lacinia eget consectuer sed, convallis at tellus. Nulla porttitor accumsan tincidunt.',
+            }
+        ]
       }
 })

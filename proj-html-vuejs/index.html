@@ -114,11 +114,11 @@
                         <div class="barra">
                         </div>
                         <div class="table-2">
-                            <p>FINE DINING EXPERIENCE</p>
+                            <p class="text-table2">FINE DINING EXPERIENCE</p>
                 
-                            <h1>THE BEST TABLE IN TOWN</h1>
+                            <h2 class="title-table2">THE BEST TABLE IN TOWN</h2>
                 
-                            <p>
+                            <p class="text-table2">
                                 Pellentescque vitae viverra risus, sagittis.
                                 Venetatis ridiculus scelerisque nisi in urna
                                 nulla.
@@ -148,7 +148,7 @@
 
                         <div class="descrizione-meggy-stewart">
 
-                            <p>MEGGY STEWART</p>
+                            <p v-for="elemento in maggy">{{elemento.name}}</p>
                             <h2 class="paper-meggy">NEW YORK TIMES</h2>
 
                             <!-- CINQUE STELLE CON IL V-FOR -->
@@ -161,12 +161,9 @@
                             
                             <div class="barra barra-meggy">
                             </div>
-                            <p>
-                                Non arcu mauris tortor ultrices mollis tellus euismod fermentum. Habitant amet tincidunt id sapien accumsan sed at.
-                            </p>
-                            <p>
-                                Mmalesuada ullamcorper amet. Pretium pretium dignissim nisi.
-                            </p>
+                            <p v-for="elemento in maggy">{{elemento.description}}</p>
+
+                            <p v-for="elemento in maggy">{{elemento.description2}}></p>
 
                             <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
 
@@ -178,7 +175,7 @@
                         <div class="mary-maxey">
                             <div class="descrizione-mary-maxey">
 
-                                <p>MARY MAXEY</p>
+                                <p v-for="elemento in maxey">{{elemento.name}}</p>
                                 <h2 class="paper-maxey">THE GUARDIAN</h2>
     
                                 <!-- CINQUE STELLE CON IL V-FOR -->
@@ -191,9 +188,7 @@
                                 
                                 <div class="barra">
                                 </div>
-                                <p>
-                                    Non arcu mauris tortor ultrices mollis tellus euismod fermentum. Habitant amet tincidunt id sapien accumsan sed.
-                                </p>
+                                <p v-for="elemento in maxey">{{elemento.description}}</p>
     
                                 <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
     
@@ -203,7 +198,7 @@
                         <div class="patrick-monroe">
                             <div class="descrizione-patrick-monroe">
 
-                                <p>PATRIK MONROE</p>
+                                <p v-for="elemento in patrik">{{elemento.name}}</p>
                                 <h2 class="paper-patrik">GLOBE AND MAIL</h2>
     
                                 <!-- CINQUE STELLE CON IL V-FOR -->
@@ -216,9 +211,7 @@
                                 
                                 <div class="barra">
                                 </div>
-                                <p>
-                                    Vivamus magna justo, lacinia eget consectuer sed, convallis at tellus. Nulla porttitor accumsan tincidunt.
-                                </p>
+                                <p v-for="elemento in patrik">{{elemento.description}}</p>
     
                                 <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
     
