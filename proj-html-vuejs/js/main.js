@@ -88,6 +88,7 @@ new Vue({
                 description: 'Vivamus magna justo, lacinia eget consectuer sed, convallis at tellus. Nulla porttitor accumsan tincidunt.',
             }
         ],
+
         prodottoCoffee: [
             {
               name: 'caffe',
@@ -188,5 +189,12 @@ new Vue({
                 description: 'Eget vulputate vite quis rutrum blandit sed. Quam nulla sit lacina.'
             },
         ],
+        descrizioneAbalone:[
+            {
+                nameDish: "BRAISED ABALONE",
+                price: '52',
+                description: 'Pretium accumsan porttitor viverra leo gravida nollis imperdiet. Fringilla nibh pharetra sociis leo amet.'
+            }
+        ]
       }
 })

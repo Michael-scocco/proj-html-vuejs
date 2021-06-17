@@ -147,10 +147,10 @@
 
                         </div>
 
-                        <div class="descrizione-meggy-stewart">
+                        <div v-for="elemento in maggy" class="descrizione-meggy-stewart">
 
-                            <p v-for="elemento in maggy">{{elemento.name}}</p>
-                            <h2 v-for="elemento in maggy" class="paper-meggy">{{elemento.paper}}</h2>
+                            <p>{{elemento.name}}</p>
+                            <h2 class="paper-meggy">{{elemento.paper}}</h2>
 
 
                             <!-- CINQUE STELLE CON IL V-FOR -->
@@ -163,9 +163,9 @@
                             
                             <div class="barra barra-meggy">
                             </div>
-                            <p v-for="elemento in maggy">{{elemento.description}}</p>
+                            <p>{{elemento.description}}</p>
 
-                            <p v-for="elemento in maggy">{{elemento.description2}}></p>
+                            <p>{{elemento.description2}}></p>
 
                             <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
 
@@ -177,10 +177,10 @@
                         <div class="mary-maxey">
                             <div class="gradazione">
                                 
-                                <div class="descrizione-mary-maxey">
+                                <div v-for="elemento in maxey" class="descrizione-mary-maxey">
 
-                                    <p v-for="elemento in maxey">{{elemento.name}}</p>
-                                    <h2 v-for="elemento in maxey" class="paper-maxey">{{elemento.paper}}</h2>
+                                    <p>{{elemento.name}}</p>
+                                    <h2 class="paper-maxey">{{elemento.paper}}</h2>
         
                                     <!-- CINQUE STELLE CON IL V-FOR -->
                                     <ul class="stelle">
@@ -192,7 +192,7 @@
                                     
                                     <div class="barra">
                                     </div>
-                                    <p v-for="elemento in maxey">{{elemento.description}}</p>
+                                    <p>{{elemento.description}}</p>
         
                                     <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
         
@@ -204,9 +204,9 @@
                         <div class="patrick-monroe">
                             <div class="gradazione">
                                 
-                                <div class="descrizione-patrick-monroe">
-                                    <p v-for="elemento in patrik">{{elemento.name}}</p>
-                                    <h2 v-for="elemento in patrik" class="paper-patrik">{{elemento.paper}}</h2>
+                                <div v-for="elemento in patrik" class="descrizione-patrick-monroe">
+                                    <p>{{elemento.name}}</p>
+                                    <h2 class="paper-patrik">{{elemento.paper}}</h2>
         
                                     <!-- CINQUE STELLE CON IL V-FOR -->
                                     <ul class="stelle">
@@ -218,7 +218,7 @@
                                     
                                     <div class="barra">
                                     </div>
-                                    <p v-for="elemento in patrik">{{elemento.description}}</p>
+                                    <p>{{elemento.description}}</p>
         
                                     <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
         
@@ -317,7 +317,6 @@
                     <div class="settima-sessione-menu-pagine">
 
                         <ul class="distribuzione pag1">
-
                             <h3 v-for="nome in nomiPagine" class="title-page">{{nome.namePage1}}</h3>
                             <li class="distribuzione-link" v-for="piatto in menu1">
                                 <div class="settima-sessione-prezzo-piatto">
@@ -325,11 +324,10 @@
                                 </div>
                                 <p>{{piatto.description}}</p>
                             </li>
-    
-                        </ul>
->
-                        <ul class="distribuzione pag2">
 
+                        </ul>
+
+                        <ul class="distribuzione pag2">
                             <div class="gradazione3 ">
                             </div>
                               <h3 v-for="nome in nomiPagine" class="title-page">{{nome.namePage2}}</h3>
@@ -339,14 +337,9 @@
                                 </div>
                                 <p>{{piatto.description}}</p>
                               </li>
-                            
-
                         </ul>
-                                
-
-                                
+  
                         <ul class="distribuzione pag3">
-
                             <h3 v-for="nome in nomiPagine" class="title-page">{{nome.namePage3}}</h3>
                             <li class="distribuzione-link" v-for="piatto in menu3">
                                 <div class="settima-sessione-prezzo-piatto">
@@ -354,7 +347,6 @@
                                 </div>
                                 <p>{{piatto.description}}</p>
                             </li>
-
                         </ul>
 
                     </div><!-- settima-sessione-menu-pagine -->
@@ -362,8 +354,25 @@
             </section>
             <!-- FINE SETTIMA SESSIONE MENU -->
 
+            <!-- INIZIO OTTAVA SESSIONE FOTO ABALONE -->
+            <section class="ottava-sessione-foto-abalone">
 
+                <div class="container-piccolo">
+                    <div v-for="piatto in descrizioneAbalone" class="ottava-sessione-descrizione-abalone">
+                        <div class="ottava-sessione-descrizione-abalone-title">
+                            <h2>{{piatto.nameDish}}</h2><span>${{piatto.price}}</span>
+                        </div>
+                        
+                        <div class="barra">
+                        </div>
+    
+                        <p>{{piatto.description}}</p>
+    
+                        <button class="bottone-bordo-bianco">VIEW IN THE MENU</button>
+                    </div>
+                </div>
 
+            </section>
 
         </main>
     

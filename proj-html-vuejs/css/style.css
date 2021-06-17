@@ -16,11 +16,14 @@ body{
 li{
     list-style: none;
 }
+p{
+    line-height: 25px;
+}
 /* *UNICA PROPRIETA* */
 header, table, .bottone-bordo-bianco,
 .table-2, .stelle-link, .descrizione-meggy-stewart,
 .mary-maxey, .patrick-monroe, .prezzo-piatto, .consegna-domicilio,
-.pag2{
+.pag2, .ottava-sessione-descrizione-abalone{
     color: white;
 }
 /* *UNICA PROPRIETA* */
@@ -541,14 +544,11 @@ header > .container-grande{
     
 }
 .pag1, .pag3{
-    background-color: #E8E8E8;
-}
-.pag1{
+    background-color: #e8e8e8;
     transform: translateY(-45%);
 }
 .pag3{
     right: 0;
-    transform: translateY(-47.5%);
 }
 .pag2{
     top: 51%;
@@ -591,4 +591,43 @@ header > .container-grande{
 /* *FINE SETTIMA SESSIONE MENU*  */
 
 /* *INIZIO OTTAVA SESSIONE MENU*  */
+.ottava-sessione-foto-abalone{
+    height: 700px;
+    background-image: url(../images/hero42x.jpg);
+    background-size: cover;
+    background-position: 50% 65%;
+}
+.ottava-sessione-foto-abalone > .container-piccolo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.ottava-sessione-descrizione-abalone{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    height: 500px;
+    width: 43%;
+    padding: 70px 70px;
+}
+
+.ottava-sessione-descrizione-abalone-title{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.ottava-sessione-descrizione-abalone-title > h2{
+    font-size: 33px;
+}
+.ottava-sessione-descrizione-abalone-title > span{
+    font-size: 14px;
+}
+
+/* *FINE OTTAVA SESSIONE MENU*  */
+
 
