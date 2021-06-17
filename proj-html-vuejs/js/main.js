@@ -60,7 +60,7 @@ new Vue({
               link: 'MAKE A RESERVATION'
             },
             {
-              name: 'FRESH PRODUCE EVERY DAY',
+              name: 'FRESH PRODUCE EVERYDAY',
               description: 'Hendrerit amet, volutpat leo non, commodo maecenas scelerisque tincidunt. Morbi vulputate morbi purus quisque sit sagittis orci elementum gravida',
               img: 'sushi-3',
               link: 'LEARN MORE ABOUT US'

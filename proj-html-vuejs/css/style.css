@@ -24,6 +24,7 @@ p{
 .text-menu{
     color: #192c3a;
 }
+
 /* *UNICA PROPRIETA* */
 header, table, .bottone-bordo-bianco,
 .table-2, .stelle-link, .descrizione-meggy-stewart,
@@ -216,7 +217,7 @@ header > .container-grande{
     width: calc(100% / 3);
     text-align: center;
     list-style: none;
-    padding: 20px;
+    padding: 8px;
 }
 .barra-grigio{
     border: 1px solid #bcbcbc;
@@ -726,3 +727,6 @@ a:last-child{
     color: #bcbcbc;
     font-size: 15px;
 }
+
+
+
