@@ -5,7 +5,8 @@
   }
 
 body{
-    background-color: black;
+    background-color: #969696;
+    font-family: 'Lato', sans-serif;
 }
 
 .container-complessivo{
@@ -701,10 +702,27 @@ a:last-child{
     font-size: 19px;
 }
 .down{
+    position: relative;
     background-color: black;
     height: 70px;
     font-size: 13px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.back-header{
+    position: absolute;
+    bottom: 0px;
+    right: 57px;
+    width: 40px;
+    height: 30px;
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.fa-chevron-up{
+    color: #bcbcbc;
+    font-size: 15px;
 }
