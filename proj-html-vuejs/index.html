@@ -21,7 +21,12 @@
     
                 <nav class="menu-destra">
                     <ul class="menu-destra-link">
-                        <li v-for='link in menuDestra'><a href="#">{{link}}</a></li>
+                        <li v-for='link in menuDestra'>
+                            <a href="#">
+                                {{link.nome}}
+                                <span class="bordo-new" v-if="link.tag != ''">{{link.tag}}</span>
+                            </a>
+                        </li>
                         <i class="fas fa-shopping-cart"></i>
                     </ul>
                 </nav>
@@ -57,14 +62,14 @@
                     <!-- INIZIO PRIMA SESSIONE UP -->
                     <div class="prima-sessione-up">
                         <div class="firma">
-                            <p>
-                                <strong>HAC TELLUS, FELIS RISUS AT</strong> mattis mattis. Eget euismod semper eget tortor, donec amet, blandit. Tristique facilisi faucibus elementum feugiat in nam in feugiat. Ipsum odio etiam duis facilisis amet vulputate
+                            <p v-for="elem in sessioneUp">
+                                <strong>{{elem.textStrong}}</strong> {{elem.textNormal}}
                             </p>
         
-                            <h1><strong>FOOD IS OUR COMMON GROUND, A UNIVERSAL EXPERIENCE.</strong></h1>
+                            <h1 v-for="elem in sessioneUp">{{elem.title}}</h1>
         
-                            <p>
-                                Tristique tempus condimentun diam donec. Condimentum ullamcorper sit elementum hendrerit mi nulla in consaquat, ut. Mentus, nullam scelerique netus viverra dui
+                            <p v-for="elem in sessioneUp">
+                                {{elem.textNormal2}}
                             </p>
                             <img src="images/signature.jpg" width="150" height="130" alt="firma">
                         </div><!-- firma -->
@@ -78,7 +83,7 @@
                     <!-- INIZIO PRIMA SESSIONE DOWN -->
                     <div class="prima-sessione-down">
                         <ul class="tipologie-sushi-lista">
-                            <li v-for="tipo in tipologie" class="tipologia-sushi-lista-elem">
+                            <li v-for="tipo in tipologieSushi" class="tipologia-sushi-lista-elem">
                                 <div class="tipologia-sushi-lista-elem-img">
                                     <img :src="'img/' + tipo.img + '.png'" :alt="tipo.name">
                                 </div>
@@ -133,7 +138,7 @@
                 <div class="container-piccolo">
 
                     <h2 id="title-terza-sessione">What critics are saying about us</h2>
-                    <div class="barra-grigio">
+                    <div class="barra-grigio-titoli">
 
                     </div>
 
@@ -145,7 +150,8 @@
                         <div class="descrizione-meggy-stewart">
 
                             <p v-for="elemento in maggy">{{elemento.name}}</p>
-                            <h2 class="paper-meggy">NEW YORK TIMES</h2>
+                            <h2 v-for="elemento in maggy" class="paper-meggy">{{elemento.paper}}</h2>
+
 
                             <!-- CINQUE STELLE CON IL V-FOR -->
                             <ul class="stelle stelle-meggy">
@@ -169,61 +175,194 @@
                     <div class="container-immagini-sotto">
                         
                         <div class="mary-maxey">
-                            <div class="descrizione-mary-maxey">
-
-                                <p v-for="elemento in maxey">{{elemento.name}}</p>
-                                <h2 class="paper-maxey">THE GUARDIAN</h2>
-    
-                                <!-- CINQUE STELLE CON IL V-FOR -->
-                                <ul class="stelle">
-                                    <li class="stelle-link">
-                                        <i v-for="num in 5" class="fas fa-star"></i>
-                                    </li>
-                                </ul>
-                                <!-- CINQUE STELLE CON IL V-FOR -->
+                            <div class="gradazione">
                                 
-                                <div class="barra">
-                                </div>
-                                <p v-for="elemento in maxey">{{elemento.description}}</p>
-    
-                                <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
-    
-                            </div>  <!-- descrizione-mary-maxey -->
-                        </div>
+                                <div class="descrizione-mary-maxey">
+
+                                    <p v-for="elemento in maxey">{{elemento.name}}</p>
+                                    <h2 v-for="elemento in maxey" class="paper-maxey">{{elemento.paper}}</h2>
+        
+                                    <!-- CINQUE STELLE CON IL V-FOR -->
+                                    <ul class="stelle">
+                                        <li class="stelle-link">
+                                            <i v-for="num in 5" class="fas fa-star"></i>
+                                        </li>
+                                    </ul>
+                                    <!-- CINQUE STELLE CON IL V-FOR -->
+                                    
+                                    <div class="barra">
+                                    </div>
+                                    <p v-for="elemento in maxey">{{elemento.description}}</p>
+        
+                                    <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
+        
+                                </div>  <!-- descrizione-mary-maxey -->
+
+                            </div><!-- gradazione -->
+                        </div><!-- mary-maxey -->
 
                         <div class="patrick-monroe">
-                            <div class="descrizione-patrick-monroe">
-
-                                <p v-for="elemento in patrik">{{elemento.name}}</p>
-                                <h2 class="paper-patrik">GLOBE AND MAIL</h2>
-    
-                                <!-- CINQUE STELLE CON IL V-FOR -->
-                                <ul class="stelle">
-                                    <li class="stelle-link">
-                                        <i v-for="num in 5" class="fas fa-star"></i>
-                                    </li>
-                                </ul>
-                                <!-- CINQUE STELLE CON IL V-FOR -->
+                            <div class="gradazione">
                                 
-                                <div class="barra">
-                                </div>
-                                <p v-for="elemento in patrik">{{elemento.description}}</p>
-    
-                                <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
-    
-                            </div>  <!-- descrizione-patrick-monroe -->
-
-                        </div>
+                                <div class="descrizione-patrick-monroe">
+                                    <p v-for="elemento in patrik">{{elemento.name}}</p>
+                                    <h2 v-for="elemento in patrik" class="paper-patrik">{{elemento.paper}}</h2>
+        
+                                    <!-- CINQUE STELLE CON IL V-FOR -->
+                                    <ul class="stelle">
+                                        <li class="stelle-link">
+                                            <i v-for="num in 5" class="fas fa-star"></i>
+                                        </li>
+                                    </ul>
+                                    <!-- CINQUE STELLE CON IL V-FOR -->
+                                    
+                                    <div class="barra">
+                                    </div>
+                                    <p v-for="elemento in patrik">{{elemento.description}}</p>
+        
+                                    <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
+        
+                                </div>  <!-- descrizione-patrick-monroe -->
+                             </div><!-- gradazione -->
+                        </div><!-- patrick-monroe -->
                     </div><!-- container-immagini-sotto -->
                     
-                </div>
-            <!-- INIZIO TERZA SESSIONE RAGAZZA CHE CUCINA -->
-
-                
-                
-
+                </div><!-- container-piccolo -->
             </section>
             <!-- FINE TERZA SESSIONE RAGAZZA CHE CUCINA -->
+
+            <!-- INIZIO QUARTA SESSIONE FOTO RAVIOLI -->
+            <section class="quarta-sessione-foto-ravioli">
+                <div class="gradazione2">
+                    <p class="prezzo-piatto">KUNG PAO CHICKEN - $32</p>
+                </div>
+            </section>
+            <!-- FINE QUARTA SESSIONE FOTO RAVIOLI -->
+
+            <!-- INIZIO QUINTA SESSIONE FOTO TRE  -->
+            <section class="quinta-sessione-3-foto">
+                <div class="container-piccolo">
+
+                    <h2 id="title-quinta-sessione">Latest new ℇ promotion</h2>
+                    <div class="barra-grigio-titoli-quinta-sessione">
+
+                    </div>
+
+                    <div class="prodotti-nuovi">
+                        <div v-for="prodotto in prodottoCoffee">
+                            <div class="prodott-nuovo-immagine-caffe">
+                                
+                            </div>
+                            <div class="start">
+                                <h3 class="title-prodotti">{{prodotto.title}}</h3>
+                                <p class="categories-new">{{prodotto.make}} | {{prodotto.data}} | {{prodotto.categories}}</p>
+                            </div>
+                        </div>
+                        <div v-for="prodotto in  prodottoNewMenu">
+                            <div class="prodott-nuovo-newMenu">
+                                
+                            </div>
+                            <div class="start">
+                                <h3 class="title-prodotti">{{prodotto.title}}</h3>
+                                <p class="categories-new">{{prodotto.make}} | {{prodotto.data}} | {{prodotto.categories}}</p>
+                            </div>
+                        </div>
+                        <div v-for="prodotto in prodottoBancomant">
+                            <div class="prodott-nuovo-Bancomant">
+                                
+                            </div>
+                            <div class="start">
+                                <h3 class="title-prodotti">{{prodotto.title}}</h3>
+                                <p class="categories-new">{{prodotto.make}} | {{prodotto.data}} | {{prodotto.categories}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FINE QUINTA SESSIONE 3 FOTO  -->
+
+            <!-- INIZIO SESTA SESSIONE GIAPPONESI -->
+            <section class="sesta-sessione-giapponesi">
+
+                <div class="sesta-sessione-giapponesi-immagine">
+
+                </div>
+                <div class="consegna-domicilio">
+
+                    <div class="barra">
+                    </div>
+                    <div class="domicilio">
+                        <p class="text-domicilio">ENJOY YOUR MEAL AT HOME</p>
+            
+                        <h2 class="title-domicilio">TAKEOUT NOW AVAILABLE</h2>
+            
+                        <p class="text-domicilio">
+                            Pellentescque vitae viverra risus, sagittis.
+                            Venetatis ridiculus scelerisque nisi in urna
+                            nulla non arcu moris tortor.
+                        </p>
+            
+                        <button class="bottone-bordo-bianco"><i class="fas fa-car"></i>VIEW TAKEOUT MENU</button>
+                    </div>
+                
+                </div><!-- best-table -->
+
+
+            </section>
+            <!-- FINE SESTA SESSIONE GIAPPONESI -->
+
+            <!-- INIZIO SETTIMA SESSIONE MENU -->
+            <section class="settima-sessione-menu">
+                <div class="container-grande">
+                    <div class="settima-sessione-menu-pagine">
+
+                        <ul class="distribuzione pag1">
+
+                            <h3 v-for="nome in nomiPagine" class="title-page">{{nome.namePage1}}</h3>
+                            <li class="distribuzione-link" v-for="piatto in menu1">
+                                <div class="settima-sessione-prezzo-piatto">
+                                    <h5>{{piatto.nameDish}}</h5><span>${{piatto.price}}</span>
+                                </div>
+                                <p>{{piatto.description}}</p>
+                            </li>
+    
+                        </ul>
+>
+                        <ul class="distribuzione pag2">
+
+                            <div class="gradazione3 ">
+                            </div>
+                              <h3 v-for="nome in nomiPagine" class="title-page">{{nome.namePage2}}</h3>
+                              <li class="distribuzione-link" v-for="piatto in menu2">
+                                <div class="settima-sessione-prezzo-piatto">
+                                   <h5>{{piatto.nameDish}}</h5><span>${{piatto.price}}</span>
+                                </div>
+                                <p>{{piatto.description}}</p>
+                              </li>
+                            
+
+                        </ul>
+                                
+
+                                
+                        <ul class="distribuzione pag3">
+
+                            <h3 v-for="nome in nomiPagine" class="title-page">{{nome.namePage3}}</h3>
+                            <li class="distribuzione-link" v-for="piatto in menu3">
+                                <div class="settima-sessione-prezzo-piatto">
+                                    <h5>{{piatto.nameDish}}</h5><span>${{piatto.price}}</span>
+                                </div>
+                                <p>{{piatto.description}}</p>
+                            </li>
+
+                        </ul>
+
+                    </div><!-- settima-sessione-menu-pagine -->
+                </div>
+            </section>
+            <!-- FINE SETTIMA SESSIONE MENU -->
+
+
 
 
         </main>

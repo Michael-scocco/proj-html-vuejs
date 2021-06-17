@@ -13,10 +13,14 @@ body{
     background-color: black;
     margin: auto;
 }
+li{
+    list-style: none;
+}
 /* *UNICA PROPRIETA* */
 header, table, .bottone-bordo-bianco,
 .table-2, .stelle-link, .descrizione-meggy-stewart,
-.mary-maxey, .patrick-monroe{
+.mary-maxey, .patrick-monroe, .prezzo-piatto, .consegna-domicilio,
+.pag2{
     color: white;
 }
 /* *UNICA PROPRIETA* */
@@ -49,9 +53,9 @@ header > .container-grande{
     
 }
 
-.menu-destra-link > li{
+/* .menu-destra-link > li{
     list-style: none;
-}
+} */
 
 .menu-destra-link > li > a{
     text-decoration: none;
@@ -69,6 +73,12 @@ header > .container-grande{
     color: #bcbcbc;
 }
 
+.bordo-new{
+    border: 1px solid gray;
+    padding: 2px 7px;
+    font-weight: 600;
+}
+/* *FINE HEADER* */
 /* *CREO CONTAINER GRANDE PER SESSIONI SUCCESSIVE * */
 .container-grande{
     background-color: violet;
@@ -164,7 +174,7 @@ header > .container-grande{
     padding-left: 0;
 }
 .firma > p, h1{
-    margin-bottom: calc(100% / 8 - 20px);
+    margin-bottom: calc(100% / 9.8);
 }
 .firma > p{
     line-height: 25px;
@@ -239,7 +249,6 @@ header > .container-grande{
     width: 100%;
     
 }
-
 .immagine-piatti-sushi{
     background-image: url(../images/slider32x.jpg);
     background-repeat: no-repeat;
@@ -247,7 +256,6 @@ header > .container-grande{
     height: auto;
     width: 68%;
 }
-
 .best-table-2{
     display: flex;
     width: 45%;
@@ -288,13 +296,26 @@ header > .container-grande{
 }
     /* *FINE REGOLE CONTENITORI* */
 
-#title-terza-sessione{
+#title-terza-sessione,
+#title-quinta-sessione{
     text-align: center;
     margin-bottom: 18px;
     font-size: 35px;
 }
+.barra-grigio-titoli{
+    border: 1px solid #bcbcbc;
+    width: 75px;
+    height: 0;
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%) ;
+}
 .stelle{
     list-style: none;
+}
+.stelle-link > i{
+    margin-right: 4px;
+    font-size: 13px;
 }
     /* * INIZIO MEGGY STEWART* */
 .container-immagini-sopra{
@@ -336,7 +357,7 @@ header > .container-grande{
     background-size: cover;
     height: 560px;
     width: 50%;
-    padding: 80px 110px;
+
 }
 .descrizione-mary-maxey,
 .descrizione-patrick-monroe{
@@ -358,8 +379,216 @@ header > .container-grande{
 }
     /* *FINE FOTO MARY E PATRICK* */
 
+    /* *INIZIO GRADAZIONE FOTO* */
+.gradazione{
+    height: 100%;
+    padding: 80px 110px;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+    /* *FINE GRADAZIONE FOTO* */
+
     /* *FINE MARY MAXEY* *FINE PATRICK MONROE**/
-
-
-
 /* *FINE TERZA SESSIONE RAGAZZA CHE CUCINA* */
+
+
+
+/* *INIZIO QUARTA SESSIONE RAVIOLI* */
+.quarta-sessione-foto-ravioli{
+    background-image: url(../images/page52x.jpg);
+    background-position-x: 44.2%;
+    background-size: cover;
+    height: 510px;
+}
+.gradazione2{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+.prezzo-piatto{
+    height: 10%;
+    font-size: 13px;
+}
+
+/* *FINE QUARTA SESSIONE RAVIOLI* */
+
+
+
+/* *INIZIO QUINTA SESSIONE 3 FOTO* */
+.quinta-sessione-3-foto{
+    height: 850px;
+    background-color: white;
+    text-align: center;
+}
+.quinta-sessione-3-foto > .container-piccolo{
+    transform: translateY(8%);
+    height: 84.6%;
+}
+.barra-grigio-titoli-quinta-sessione {
+    border: 1px solid #bcbcbc;
+    width: 75px;
+    height: 0;
+    border-radius: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%) ;
+    margin-bottom: 36px;
+}
+.prodotti-nuovi{
+    display: flex;
+    justify-content: space-between;
+    height: 550px;
+}
+
+.prodott-nuovo-immagine-caffe{
+    background-image: url(../images/blog92x-400x458.jpg);
+}
+.prodott-nuovo-newMenu{
+    background-image: url(../images/blog72x-400x458.jpg);
+}
+.prodott-nuovo-Bancomant{
+    background-image: url(../images/blog82x-400x458.jpg);
+}
+.prodott-nuovo-immagine-caffe,
+.prodott-nuovo-newMenu,
+.prodott-nuovo-Bancomant{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 100%;
+    margin-bottom: 20px;
+}
+.start{
+    padding:28px;
+}
+.start > h3{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.start > p{
+    font-size: 12px;
+}
+
+/* *FINE QUINTA SESSIONE 3 FOTO* */
+
+/* *INIZIO SESTA SESSIONE GIAPPONESI* */
+.sesta-sessione-giapponesi{
+    display: flex;
+    min-height: 600px;
+    width: 100%;
+    /* background-color: aquamarine; */
+}
+
+.sesta-sessione-giapponesi-immagine{
+    background-image: url(../images/slider72x-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: 103%;
+    background-position: 50% 100%;
+    height: auto;
+    width: 68%;
+}
+.consegna-domicilio{
+    display: flex;
+    width: 45%;
+    padding: 140px;
+}
+.domicilio{
+    width: 100%;
+    /* color: white; */
+}
+.domicilio > p:first-child{
+    font-size: 12px;
+}
+.domicilio > .title-domicilio{
+    font-size: 27px;
+}
+.domicilio > .title-domicilio, .text-domicilio{
+    margin-bottom: calc(100% / 4.2)
+}
+.domicilio:last-child > .bottone-bordo-bianco{
+    margin-bottom: 0;
+}
+.fa-car{
+    margin-right: 5px;
+}
+/* *FINE SESTA SESSIONE GIAPPONESI* */
+
+
+
+/* *INIZIO SETTIMA SESSIONE MENU*  */
+.settima-sessione-menu{
+    height: 800px;
+    background-color: white;
+    
+}
+.settima-sessione-menu > .container-grande{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.settima-sessione-menu-pagine{
+    position: relative;
+    width: 100%;
+    background-color: lightskyblue;
+    
+}
+.pag1, .pag2, .pag3{
+    display: inline-block;
+    min-height: 600px;
+    width: calc(100% / 3);
+    position: absolute;
+    
+}
+.pag1, .pag3{
+    background-color: #E8E8E8;
+}
+.pag1{
+    transform: translateY(-45%);
+}
+.pag3{
+    right: 0;
+    transform: translateY(-47.5%);
+}
+.pag2{
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -51%);
+    background-image: url(../images/misc22x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.gradazione3 {
+    z-index: -1;
+    position: inherit;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    
+}
+
+.distribuzione{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 57px 61px;
+}
+.settima-sessione-prezzo-piatto{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.settima-sessione-prezzo-piatto > h5{
+    font-size: 16px;
+}
+.settima-sessione-prezzo-piatto > span{
+    font-size: 13px;
+}
+/* *FINE SETTIMA SESSIONE MENU*  */
+
+/* *INIZIO OTTAVA SESSIONE MENU*  */
+
