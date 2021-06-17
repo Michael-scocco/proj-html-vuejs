@@ -18,12 +18,16 @@ li{
 }
 p{
     line-height: 25px;
+    color: #bcbcbc;
+}
+.text-menu{
+    color: #192c3a;
 }
 /* *UNICA PROPRIETA* */
 header, table, .bottone-bordo-bianco,
 .table-2, .stelle-link, .descrizione-meggy-stewart,
 .mary-maxey, .patrick-monroe, .prezzo-piatto, .consegna-domicilio,
-.pag2, .ottava-sessione-descrizione-abalone{
+.pag2, .ottava-sessione-descrizione-abalone, .title-principal{
     color: white;
 }
 /* *UNICA PROPRIETA* */
@@ -62,7 +66,7 @@ header > .container-grande{
 
 .menu-destra-link > li > a{
     text-decoration: none;
-    margin-right: 40px;
+    margin-right: 5px;
     
 }
 /* *EFFETTO HOVER A LINK* */
@@ -84,7 +88,7 @@ header > .container-grande{
 /* *FINE HEADER* */
 /* *CREO CONTAINER GRANDE PER SESSIONI SUCCESSIVE * */
 .container-grande{
-    background-color: violet;
+    /* background-color: violet; */
     max-width: 1200px;
     margin: auto;
     min-height: 300px;
@@ -92,7 +96,7 @@ header > .container-grande{
 }
 /* *CREO CONTAINER PICCOLO PER SESSIONI SUCCESSIVE * */
 .container-piccolo{
-    background-color: orange;
+    /* background-color: orange; */
     max-width: 1000px;
     margin: auto;
     min-height: 300px;
@@ -114,7 +118,7 @@ header > .container-grande{
 }
     /* *REGOLE BARRA* */
 .barra{
-    border: 1px solid white;
+    border: 1px solid #bcbcbc;
     width: 50px;
     height: 0;
     margin-top: 7px;
@@ -140,10 +144,10 @@ header > .container-grande{
 .table > p, h1{
     margin-bottom: 30px;
 }
-.bottone-bordo-bianco{
+.bottone-bordo-grigio{
     padding: 10px 20px;
-    border: 1px solid white;
-    /* color: white; */
+    border: 1px solid #bcbcbc;
+    color: #bcbcbc;
     background-color: transparent;
     font-size: 11px;
     font-weight: 600;
@@ -178,6 +182,7 @@ header > .container-grande{
 }
 .firma > p, h1{
     margin-bottom: calc(100% / 9.8);
+    color: black;
 }
 .firma > p{
     line-height: 25px;
@@ -232,6 +237,7 @@ header > .container-grande{
 .tipologia-sushi-lista-elem> p{
     line-height: 25px;
     font-size: 16px;
+    color: black;
 }
 .button-sushi{
     padding: 10px 20px;
@@ -289,7 +295,7 @@ header > .container-grande{
     /* *INIZIO REGOLE CONTENITORI* */
 .terza-sessione-ragazza-cucina{
     height: 1450px;
-    background-color: tomato;
+    background-color: white;
 }
 .terza-sessione-ragazza-cucina > .container-piccolo{
     display: flex;
@@ -324,7 +330,7 @@ header > .container-grande{
 .container-immagini-sopra{
     display: flex;
     margin-top: 50px;
-    background-color: lightpink;
+    /* background-color: lightpink; */
     margin-bottom: 40px;
 }
 .ragazza-cuoca{
@@ -339,6 +345,7 @@ header > .container-grande{
     width: 50%;
     height: 598px;
     padding: 74px 105px;
+    background-color: black;
 }
 .descrizione-meggy-stewart > p, 
 .paper-meggy, .stelle-meggy, .barra-meggy{
@@ -348,7 +355,7 @@ header > .container-grande{
 
 .container-immagini-sotto{
     display: flex;
-    background-color: green;
+    background-color: white;
     height: 560px;
 }
     /* *INIZIO MARY MAXEY* *INIZIO PATRICK MONROE**/
@@ -533,7 +540,7 @@ header > .container-grande{
 .settima-sessione-menu-pagine{
     position: relative;
     width: 100%;
-    background-color: lightskyblue;
+    /* background-color: lightskyblue; */
     
 }
 .pag1, .pag2, .pag3{
@@ -626,8 +633,78 @@ header > .container-grande{
 }
 .ottava-sessione-descrizione-abalone-title > span{
     font-size: 14px;
+    color:#bcbcbc;
 }
 
 /* *FINE OTTAVA SESSIONE MENU*  */
 
 
+
+/* *REGOLE FOOTER* */
+
+footer{
+    
+    height: 700px;
+}
+.up{
+    background-image: url(../images/footer2x.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 108%;
+    background-position: 6% 129%;
+}
+.container-social{
+    height: 100%;
+    width: 100%;
+    /* background-color: whitesmoke; */
+}
+
+.social-ico{
+    color: white;
+}
+.social-ico > a{
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-size: 13px;
+    margin-right: 8px;
+    border-radius: 100%;
+    padding: 10px;
+}
+a:first-child{
+    padding: 10px 15px;
+}
+a:nth-last-child(2){
+    padding: 10px 12px;
+}
+a:last-child{
+    padding: 10px 12px;
+}
+.container-logo-footer-social{
+    width: 100%;
+    height: 100%;
+    /* background-color: wheat; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.link-footer-logo-social{
+    height: 350px;
+    /* background-color: whitesmoke; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 36%;
+    text-align: center;
+    font-size: 19px;
+}
+.down{
+    background-color: black;
+    height: 70px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

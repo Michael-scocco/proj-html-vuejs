@@ -195,6 +195,36 @@ new Vue({
                 price: '52',
                 description: 'Pretium accumsan porttitor viverra leo gravida nollis imperdiet. Fringilla nibh pharetra sociis leo amet.'
             }
-        ]
+        ],
+        socials: [
+      {
+        url: 'https://www.facebook.com',
+        ico: 'facebook-f'
+      },
+      {
+        url: 'https://www.twitter.com/',
+        ico: 'twitter'
+      },
+      {
+        url: 'https://www.youtube.com/',
+        ico: 'youtube'
+      },
+      {
+        url: 'https://www.instagram.com/',
+        ico: 'instagram'
+      },
+      {
+        url: 'https://www.linkedin.com/',
+        ico: 'linkedin'
+      }
+    ],
+    diritti:[
+        {
+            copy: 'Copyright 2012 - 2019 Avada',
+            all: 'All Rights Reserved',
+            word: 'WordPress',
+            Theme: 'ThemeFusion'
+        }
+    ]
       }
 })

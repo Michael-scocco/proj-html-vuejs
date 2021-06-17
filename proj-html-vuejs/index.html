@@ -40,11 +40,11 @@
                     <div class="table">
                         <p v-for="elemento in bestTable">{{elemento.name}}</p>
             
-                        <h1 v-for="elemento in bestTable">{{elemento.title}}</h1>
+                        <h1 class="title-principal" v-for="elemento in bestTable">{{elemento.title}}</h1>
             
                         <p v-for="elemento in bestTable">{{elemento.description}}</p>
             
-                        <button class="bottone-bordo-bianco">EXPLORE THE MENU</button>
+                        <button class="bottone-bordo-grigio">EXPLORE THE MENU</button>
                     </div>
                 
                 </div>
@@ -125,7 +125,7 @@
                                 nulla.
                             </p>
                 
-                            <button class="bottone-bordo-bianco">EXPLORE THE MENU</button>
+                            <button class="bottone-bordo-grigio">EXPLORE THE MENU</button>
                         </div>
                     
                     </div><!-- best-table -->
@@ -167,7 +167,7 @@
 
                             <p>{{elemento.description2}}></p>
 
-                            <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
+                            <button class="bottone-bordo-grigio">READ FULL ARTICLE</button>
 
                         </div>  <!-- descrizione-meggy-stewart -->
                     </div><!-- container-immagini-sopra -->
@@ -194,7 +194,7 @@
                                     </div>
                                     <p>{{elemento.description}}</p>
         
-                                    <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
+                                    <button class="bottone-bordo-grigio">READ FULL ARTICLE</button>
         
                                 </div>  <!-- descrizione-mary-maxey -->
 
@@ -220,7 +220,7 @@
                                     </div>
                                     <p>{{elemento.description}}</p>
         
-                                    <button class="bottone-bordo-bianco">READ FULL ARTICLE</button>
+                                    <button class="bottone-bordo-grigio">READ FULL ARTICLE</button>
         
                                 </div>  <!-- descrizione-patrick-monroe -->
                              </div><!-- gradazione -->
@@ -302,7 +302,7 @@
                             nulla non arcu moris tortor.
                         </p>
             
-                        <button class="bottone-bordo-bianco"><i class="fas fa-car"></i>VIEW TAKEOUT MENU</button>
+                        <button class="bottone-bordo-grigio"><i class="fas fa-car"></i>VIEW TAKEOUT MENU</button>
                     </div>
                 
                 </div><!-- best-table -->
@@ -322,7 +322,7 @@
                                 <div class="settima-sessione-prezzo-piatto">
                                     <h5>{{piatto.nameDish}}</h5><span>${{piatto.price}}</span>
                                 </div>
-                                <p>{{piatto.description}}</p>
+                                <p class="text-menu">{{piatto.description}}</p>
                             </li>
 
                         </ul>
@@ -345,7 +345,7 @@
                                 <div class="settima-sessione-prezzo-piatto">
                                     <h5>{{piatto.nameDish}}</h5><span>${{piatto.price}}</span>
                                 </div>
-                                <p>{{piatto.description}}</p>
+                                <p class="text-menu">{{piatto.description}}</p>
                             </li>
                         </ul>
 
@@ -362,19 +362,45 @@
                         <div class="ottava-sessione-descrizione-abalone-title">
                             <h2>{{piatto.nameDish}}</h2><span>${{piatto.price}}</span>
                         </div>
-                        
+
                         <div class="barra">
                         </div>
     
                         <p>{{piatto.description}}</p>
     
-                        <button class="bottone-bordo-bianco">VIEW IN THE MENU</button>
+                        <button class="bottone-bordo-grigio">VIEW IN THE MENU</button>
                     </div>
                 </div>
 
             </section>
+            <!-- FINE OTTAVA SESSIONE FOTO ABALONE -->
 
         </main>
+
+        <footer>
+            <section class="up">
+                <div class="container-logo-footer-social">
+                    <div class="link-footer-logo-social">
+                        <div class="logo-footer">
+                            <img src="images/logo-restaurant-2x-300x58.png" alt="logo ristorante">
+                        </div>
+                        <p>Quam eu proin sti massa condimentum. Volupat non pulvinar alique nunc. Quam eu proin sit massa condimentum.</p>
+        
+                        <div class="social-ico">
+                            <a v-for="social in socials" :href="social.url" :class="'fab fa-' + social.ico"></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="down">
+                <div v-for="diritto in diritti" class="diritti-riservati">
+                    <p>{{diritto.copy}} | {{diritto.all}} | Powered by <strong>{{diritto.word}}</strong> | <strong>{{diritto.Theme}}</strong></p>
+                </div>
+               
+            </section>
+
+        </footer>
     
     </div><!--chiusura vue-->
 
